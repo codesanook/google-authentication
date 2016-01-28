@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.IOException;
 import java.security.GeneralSecurityException;
 import java.util.Collection;
+import java.util.HashSet;
 
 public class Program {
 
@@ -37,7 +38,7 @@ public class Program {
 
     //2 get service scopes
     public static Collection<String> getScopes() {
-        java.util.Set<String> set = new java.util.HashSet<String>();
+        java.util.Set<String> set = new HashSet<>();
         set.add("https://www.googleapis.com/auth/devstorage.read_only");
         return java.util.Collections.unmodifiableSet(set);
     }
